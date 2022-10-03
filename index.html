@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles.css" rel="stylesheet">
+  <title>Tapas audio recorder</title>
+</head>
+
+<body>
+
+  <div class="center">
+    <div>
+      <a class="buttons green" id="StartAudioRecording">Start</a>
+      <a class="buttons red" id="StopRecording">Stop</a>
+    </div>
+  </div>
+  <!-- <div>
+    <a class="buttons yellow" id="Explore">Explore</a>
+  </div> -->
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+  <script src="./audioRecorder.js"></script>
+</body>
+<style>
+  body {
+    background: #e8bec5;
+  }
+
+  .buttons {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .green {
+    background: green;
+  }
+
+  .red {
+    background: red;
+  }
+  .yellow {
+    background: yellow;
+  }
+  .center {
+    width: 104px;
+    height: 28px;
+    /* background-color: red; */
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+  }
+</style>
+
+</html>
